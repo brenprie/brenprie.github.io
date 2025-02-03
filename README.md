@@ -22,6 +22,7 @@ Complete the following steps:
 4. Display the sample's metadata, i.e., an individual's demographic information.
   - Loop through each key-value pair from the metadata JSON object and create a text string.
   - Append an html tag with that text to the #sample-metadata panel.
+    
     ![hw03](https://github.com/user-attachments/assets/f61b2208-ba16-4ae8-b423-047cd714ef05)
 
 5. Update all the plots when a new sample is selected. Additionally, create any layout that you would like for your dashboard. An example dashboard is shown as follows:

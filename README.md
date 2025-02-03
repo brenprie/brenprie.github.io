@@ -29,5 +29,8 @@ Complete the following steps:
     ![hw02](https://github.com/user-attachments/assets/7418c5c2-4bd9-412e-badb-a5ecf9abd64f)
 
 ## References
+- https://plotly.com/javascript/bubble-charts/
+
+## Acknowledgements
 
 Hulcr, J. et al. (2012) A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable. Retrieved from: http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/

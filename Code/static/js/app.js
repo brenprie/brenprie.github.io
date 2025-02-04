@@ -1,13 +1,12 @@
-
-// use D3 to access API
-// let URL = "https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json";
-// let data = d3.json(URL);
+// define external data link
+let url = "https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json";
 
 
 // function that initialzes dashboard
 function initialize()
 {
-    // first take a look at the data
+    // begin with "samples.json" data file on computer for ease of coding;
+    // in last step, replace reference to json data file to the external URL    
     // let data = d3.json("samples.json");
     // console.log(data);
 
@@ -15,7 +14,7 @@ function initialize()
     var select = d3.select("#selDataset");
 
     // use d3.json to get the data
-    d3.json("samples.json").then((data) => {
+    d3.json(url).then((data) => {
         let sampleNames = data.names; // made an array of the names
         //console.log(sampleNames);
     
@@ -60,7 +59,7 @@ function demogInfo(sample)
     // console.log(sample);
 
     // use d3.json to get the data
-    d3.json("samples.json").then((data) => {
+    d3.json(url).then((data) => {
         // grab metadata
         let metadata = data.metadata;
         // console.log(metadata);
@@ -92,7 +91,7 @@ function buildBarChart(sample)
     // let data = d3.json("samples.json");
     // d3.json("samples.json").then((data) => {console.log(data)});
 
-    d3.json("samples.json").then((data) => {
+    d3.json(url).then((data) => {
         // grab all sample data
         let sampledata = data.samples;
         // console.log(sampledata);
@@ -139,7 +138,7 @@ function buildBarChart(sample)
 // function that builds bubble graph
 function buildBubbleChart(sample)
 {
-    d3.json("samples.json").then((data) => {
+    d3.json(url).then((data) => {
         // grab all sample data
         let sampledata = data.samples;
         // console.log(sampledata);

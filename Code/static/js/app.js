@@ -6,22 +6,33 @@ let url = "https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json";
 function initialize()
 {
     // begin with "samples.json" data file on computer for ease of coding;
-    // in last step, replace reference to json data file to the external URL    
+    // in last step, replace reference to json data file to the external url    
     // let data = d3.json("samples.json");
     // console.log(data);
 
-    // access dropdown selector from index.html file
+    // to access dropdown, use d3 to select the select tag with "#selDataset" id in index.html file
     var select = d3.select("#selDataset");
 
     // use d3.json to get the data
     d3.json(url).then((data) => {
-        let sampleNames = data.names; // made an array of the names
+
+        // console.log(data);
+
+        // get names key (an array of names)
+        let sampleNames = data.names; 
         //console.log(sampleNames);
     
-        // use foreach to create options for each sample in menu 
+        // use list of sampleNames to populate dropdown menu 
         sampleNames.forEach((sample) => {
             select.append("option").text(sample).property("value", sample); 
         });
+        
+            // alternative approach to the step above: 
+            // for(var i = 0; i < sampleNames.length; i++)
+            // {
+            //    select.append("option").text(sampleNames[i]).property("value", sampleNames[i]);
+            // }
+
 
         // initialize with first data sample
         let sample1 = sampleNames[0];
